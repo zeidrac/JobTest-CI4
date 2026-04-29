@@ -9,26 +9,26 @@
     <meta name="author" content="Free-Template.co" />
     <link rel="shortcut icon" href="ftco-32x32.png">
     
-    <link rel="stylesheet" href="<?= base_url('public/assets/css/custom-bs.css'); ?>">
-    <link rel="stylesheet" href="<?= base_url('public/assets/css/jquery.fancybox.min.css'); ?>">
-    <link rel="stylesheet" href="<?= base_url('public/assets/css/bootstrap-select.min.css'); ?>">
-    <link rel="stylesheet" href="<?= base_url('public/assets/fonts/icomoon/style.css'); ?>">
-    <link rel="stylesheet" href="<?= base_url('public/assets/fonts/line-icons/style.css'); ?>">
-    <link rel="stylesheet" href="<?= base_url('public/assets/css/owl.carousel.min.css'); ?>">
-    <link rel="stylesheet" href="<?= base_url('public/assets/css/animate.min.css'); ?>">
-    <link rel="stylesheet" href="<?= base_url('public/assets/css/quill.snow.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/custom-bs.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/jquery.fancybox.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap-select.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/fonts/icomoon/style.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/fonts/line-icons/style.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/owl.carousel.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/animate.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/quill.snow.css'); ?>">
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="<?= base_url('public/assets/css/style.css'); ?>">    
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">    
   </head>
   <body id="top">
 
-  <!-- <div id="overlayer"></div>
+  <div id="overlayer"></div>
   <div class="loader">
     <div class="spinner-border text-primary" role="status">
       <span class="sr-only">Loading...</span>
     </div>
-  </div> -->
+  </div>
     
 
 <div class="site-wrap">
@@ -141,22 +141,19 @@
   </div>
 
     <!-- SCRIPTS -->
-    <script src="<?= base_url('public/assets/js/jquery.min.js'); ?>"></script>
-    <script src="<?= base_url('public/assets/js/bootstrap.bundle.min.js'); ?>"></script>
-    <script src="<?= base_url('public/assets/js/isotope.pkgd.min.js'); ?>"></script>
-    <script src="<?= base_url('public/assets/js/stickyfill.min.js'); ?>"></script>
-    <script src="<?= base_url('public/assets/js/jquery.fancybox.min.js'); ?>"></script>
-    <script src="<?= base_url('public/assets/js/jquery.easing.1.3.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/jquery.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/bootstrap.bundle.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/isotope.pkgd.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/stickyfill.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/jquery.fancybox.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/jquery.easing.1.3.js'); ?>"></script>
 
-    <script src="<?= base_url('public/assets/js/jquery.waypoints.min.js'); ?>"></script>
-    <script src="<?= base_url('public/assets/js/jquery.animateNumber.min.js'); ?>"></script>
-    <script src="<?= base_url('public/assets/js/owl.carousel.min.js'); ?>"></script>
-    <script src="<?= base_url('public/assets/js/quill.min.js'); ?>"></script>
-
-
-    <script src="<?= base_url('public/assets/js/bootstrap-select.min.js'); ?>"></script>
-
-    <script src="<?= base_url('public/assets/js/custom.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/jquery.waypoints.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/jquery.animateNumber.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/owl.carousel.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/quill.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/bootstrap-select.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/custom.js'); ?>"></script>
 
      
   </body>
