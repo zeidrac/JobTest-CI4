@@ -1,0 +1,105 @@
+CRITICAL - 2026-04-29 15:25:02 --> CodeIgniter\Shield\Exceptions\SecurityException: Config\Security::$csrfProtection is set to 'cookie'. Same-site attackers may bypass the CSRF protection. Please set it to 'session'.
+[Method: GET, Route: /]
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 100.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(88): CodeIgniter\Shield\Authentication\Authenticators\Session->checkSecurityConfig()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authentication.php(65): CodeIgniter\Shield\Authentication\Authenticators\Session->__construct(Object(CodeIgniter\Shield\Models\UserModel))
+ 3 VENDORPATH\codeigniter4\shield\src\Auth.php(93): CodeIgniter\Shield\Authentication\Authentication->factory('session')
+ 4 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(68): CodeIgniter\Shield\Auth->getAuthenticator()
+ 5 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(227): CodeIgniter\Shield\Collectors\Auth->getTitleDetails()
+ 6 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+ 7 SYSTEMPATH\Debug\Toolbar.php(392): CodeIgniter\Debug\Toolbar->run(1777476302.67892, 0.0832, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 8 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 9 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+10 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter([...])
+11 SYSTEMPATH\CodeIgniter.php(393): CodeIgniter\Filters\Filters->runRequired('after')
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->runRequiredAfterFilters(Object(CodeIgniter\Filters\Filters))
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-29 15:30:23 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'job-portal' in C:\xampp\htdocs\ci-app\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\ci-app\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'job-portal', 3306, '', 0)
+#1 C:\xampp\htdocs\ci-app\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci-app\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci-app\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\ci-app\system\Database\BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\ci-app\system\Database\MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\xampp\htdocs\ci-app\system\Database\MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\ci-app\system\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ci-app\system\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+#9 C:\xampp\htdocs\ci-app\system\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+#10 C:\xampp\htdocs\ci-app\vendor\codeigniter4\shield\src\Commands\Setup.php(430): CodeIgniter\Commands\Database\Migrate->run(Array)
+#11 C:\xampp\htdocs\ci-app\vendor\codeigniter4\shield\src\Commands\Setup.php(97): CodeIgniter\Shield\Commands\Setup->runMigrations()
+#12 C:\xampp\htdocs\ci-app\vendor\codeigniter4\shield\src\Commands\Setup.php(82): CodeIgniter\Shield\Commands\Setup->publishConfig()
+#13 C:\xampp\htdocs\ci-app\system\CLI\Commands.php(74): CodeIgniter\Shield\Commands\Setup->run(Array)
+#14 C:\xampp\htdocs\ci-app\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('shield:setup', Array)
+#15 C:\xampp\htdocs\ci-app\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#16 C:\xampp\htdocs\ci-app\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#17 C:\xampp\htdocs\ci-app\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#18 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'job-portal' in C:\xampp\htdocs\ci-app\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\ci-app\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci-app\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci-app\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\ci-app\system\Database\BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\ci-app\system\Database\MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\ci-app\system\Database\MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\ci-app\system\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\ci-app\system\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+#8 C:\xampp\htdocs\ci-app\system\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+#9 C:\xampp\htdocs\ci-app\vendor\codeigniter4\shield\src\Commands\Setup.php(430): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\xampp\htdocs\ci-app\vendor\codeigniter4\shield\src\Commands\Setup.php(97): CodeIgniter\Shield\Commands\Setup->runMigrations()
+#11 C:\xampp\htdocs\ci-app\vendor\codeigniter4\shield\src\Commands\Setup.php(82): CodeIgniter\Shield\Commands\Setup->publishConfig()
+#12 C:\xampp\htdocs\ci-app\system\CLI\Commands.php(74): CodeIgniter\Shield\Commands\Setup->run(Array)
+#13 C:\xampp\htdocs\ci-app\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('shield:setup', Array)
+#14 C:\xampp\htdocs\ci-app\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#15 C:\xampp\htdocs\ci-app\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#16 C:\xampp\htdocs\ci-app\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#17 {main}
+DEBUG - 2026-04-29 15:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:48:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:48:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 15:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 16:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 16:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 16:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 16:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 16:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 16:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 16:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 16:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 16:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 16:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 16:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 17:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-29 17:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
