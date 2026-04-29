@@ -6,8 +6,8 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        // return view('welcome_message');
-        return "welcome for ci jobboard project ";
         
+        return view('home');    
+
     }
 }
